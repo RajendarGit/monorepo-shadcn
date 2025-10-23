@@ -1,12 +1,34 @@
-import { Button } from "@workspace/ui/components/button"
+import Hero from "@/components/hero";
+import PropertyCard from "@/components/property-card";
+import Test from "@/components/test";
+import { Button } from "@workspace/ui/components/button";
 
 export default function Page() {
   return (
-    <div className="flex items-center justify-center min-h-svh">
-      <div className="flex flex-col items-center justify-center gap-4">
-        <h1 className="text-2xl font-bold">Hello World</h1>
-        <Button size="sm">Button</Button>
-      </div>
-    </div>
-  )
+    <>
+      <Hero />
+      <PropertyCard
+        title="Nike Inc. Limited"
+        description="1234 Elm Street, Springfield, USA"
+        rightImage="/images/nike-right.jpg"
+        leftBottomImage="/images/nike-left-bottom.jpg"
+        bottomTextLeft={
+          <>
+            <h2 className="text-4xl mb-2">Nike AIR</h2>
+            <p className="text-md">
+              Experience the sleek and stylish design of Nike shoes.
+            </p>
+          </>
+        }
+        bottomTextRight={
+          <>
+            <h2 className="text-4xl mb-2">$199.99</h2>
+            <p className="text-lg">
+              Experience the sleek and stylish design of Nike shoes.
+            </p>
+          </>
+        }
+      />
+    </>
+  );
 }

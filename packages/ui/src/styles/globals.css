@@ -41,6 +41,8 @@
   --sidebar-accent-foreground: oklch(0.205 0 0);
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
+  --main: #203a8c;
+  --main-secondary: #a44ea0;
 }
 
 .dark {
@@ -119,9 +121,9 @@
 
 @layer base {
   * {
-    @apply border-border outline-ring/50;
+    @apply border-border outline-ring/50 tracking-wider;
   }
-  body {
-    @apply bg-background text-foreground;
+  .main-button {
+    @apply bg-gradient-to-r from-[var(--main)] to-[var(--main-secondary)] text-white shadow-lg hover:from-[var(--main-secondary)] hover:to-[var(--main)] transition-all duration-300 ease-in-out;
   }
 }
