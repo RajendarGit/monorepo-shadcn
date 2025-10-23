@@ -1,7 +1,5 @@
 import Hero from "@/components/hero";
-import PropertyCard from "@/components/property-card";
-import Test from "@/components/test";
-import { Button } from "@workspace/ui/components/button";
+import PropertyCard from "@/components/property-card/property-card";
 
 export default function Page() {
   return (

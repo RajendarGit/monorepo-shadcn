@@ -4,7 +4,6 @@ import * as React from "react";
 import Link from "next/link";
 import { CircleCheckIcon, CircleHelpIcon, CircleIcon } from "lucide-react";
 
-import { useIsMobile } from "@workspace/ui/hooks/use-mobile";
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -12,15 +11,27 @@ import {
   NavigationMenuLink,
   NavigationMenuList,
   NavigationMenuTrigger,
-  navigationMenuTriggerStyle,
 } from "@workspace/ui/components/navigation-menu";
 import { components } from "@/lib/data";
+import HumburgerMenuIconButton from "@workspace/ui/components/hamburger-menu-icon-button";
+import { useIsMobile } from "@workspace/ui/hooks/use-mobile";
 
 export function NavBarMenu() {
   const isMobile = useIsMobile();
-
   return (
-    <NavigationMenu viewport={isMobile}>
+    <>
+      {isMobile ? (
+        <HumburgerMenuIconButton OnClick={() => {}} />
+      ) : (
+        <NavigationMenuItems />
+      )}
+    </>
+  );
+}
+
+export function NavigationMenuItems() {
+  return (
+    <NavigationMenu>
       <NavigationMenuList className="flex-wrap">
         <NavigationMenuItem>
           <NavigationMenuTrigger className="bg-transparent">

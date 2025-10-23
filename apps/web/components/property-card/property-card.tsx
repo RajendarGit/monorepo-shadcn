@@ -11,7 +11,7 @@ const PropertyCard: React.FC<PropertyCardProps> = ({
   bottomTextRight,
 }) => {
   return (
-    <section className="max-w-4xl mx-auto bg-white rounded-4xl overflow-hidden grid grid-cols-1 md:grid-cols-2 gap-4 my-8">
+    <section className="max-w-4xl mx-auto bg-white rounded-4xl overflow-hidden hidden lg:grid grid-cols-1 md:grid-cols-2 gap-4 my-8">
       {/* Left Section */}
       <div className="lg:flex flex-col justify-between gap-4">
         <div className="bg-blue-900 flex flex-col justify-center p-10 h-[400px] text-blue-200">
