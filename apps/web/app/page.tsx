@@ -1,5 +1,7 @@
 import Hero from "@/components/hero";
+import ProductsView from "@/components/products-view";
 import PropertyCard from "@/components/property-card/property-card";
+import Container from "@workspace/ui/components/container";
 
 export default function Page() {
   return (
@@ -27,6 +29,9 @@ export default function Page() {
           </>
         }
       />
+      <Container>
+        <ProductsView />
+      </Container>
     </>
   );
 }
