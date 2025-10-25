@@ -24,14 +24,20 @@ export default function ProductsCard({
             className="object-cover"
           />
         </div>
-        <CardTitle>{products.title}</CardTitle>
-        <CardDescription>{products.description}</CardDescription>
-        <CardFooter className="flex flex-col gap-2">
-          <p className="text-2xl text-gray-500">₹{products.price}</p>
-          <p className="text-xl text-gray-500">{products.rating.rate}</p>
-          <p className="text-2xl text-gray-500">
-            {products.rating.count} In stock
-          </p>
+        <CardTitle className="my-4">
+          {products.title.length > 30
+            ? products.title.slice(0, 30) + "..."
+            : products.title}
+        </CardTitle>
+        <CardDescription>
+          {products.description.length > 100
+            ? products.description.slice(0, 100) + "..."
+            : products.description}
+        </CardDescription>
+        <CardFooter className="flex flex-row gap-2 mt-4 justify-evenly">
+          <p className="text-xl font-bold text-gray-500">₹{products.price}</p>
+          <p className="text-gray-500">{products.rating.rate}</p>
+          <p className="text-gray-500">{products.rating.count} In stock</p>
         </CardFooter>
       </CardContent>
     </Card>

@@ -86,7 +86,7 @@ export function NavigationMenuItems() {
         </NavigationMenuItem>
         <NavigationMenuItem>
           <NavigationMenuLink asChild className="bg-transparent">
-            <Link href="/docs">Women</Link>
+            <Link href="/products">Products</Link>
           </NavigationMenuLink>
         </NavigationMenuItem>
         <NavigationMenuItem className="hidden md:block">
