@@ -1,6 +1,8 @@
 import Hero from "@/components/hero";
+import PolygonVisualizer from "@/components/polygon/polygon-visualizer";
 import ProductsView from "@/components/products-view";
 import PropertyCard from "@/components/property-card/property-card";
+import TreeApp from "@/components/tree-node/tree-app";
 import Container from "@workspace/ui/components/container";
 
 export default function Page() {
@@ -31,6 +33,8 @@ export default function Page() {
       />
       <Container>
         <ProductsView />
+        <PolygonVisualizer />
+        <TreeApp />
       </Container>
     </>
   );
