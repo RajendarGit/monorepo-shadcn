@@ -42,3 +42,4 @@ export type TreeNodeProps = {
     onUpdate: (updatedNode: NodeType) => void;
     onDelete: (id: string) => void;
 };
+
