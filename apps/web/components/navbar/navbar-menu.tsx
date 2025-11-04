@@ -23,7 +23,7 @@ export function NavBarMenu() {
       {showMenu && (
         <Card className="p-4 w-1/3 h-[100vh] absolute top-16 left-0 z-50">
           <CardContent>
-            <NavigationMenuItems isSmallSreen={true} />
+            <NavigationMenuItems />
           </CardContent>
         </Card>
       )}
@@ -31,14 +31,10 @@ export function NavBarMenu() {
   );
 }
 
-export function NavigationMenuItems({
-  isSmallSreen = false,
-}: {
-  isSmallSreen?: boolean;
-}) {
+export function NavigationMenuItems() {
   return (
     <nav>
-      <ul className={`gap-6 py-2 ${isSmallSreen ? "grid" : "flex flex-row"}`}>
+      <ul className="gap-6 py-2 grid lg:flex lg:flex-row">
         {MENU.map((item) => (
           <li key={item.href}>
             <Link
