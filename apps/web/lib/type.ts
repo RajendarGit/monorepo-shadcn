@@ -43,3 +43,8 @@ export type TreeNodeProps = {
     onDelete: (id: string) => void;
 };
 
+export type UserProps = {
+    id?: number;
+    username: string;
+    email: string;
+};

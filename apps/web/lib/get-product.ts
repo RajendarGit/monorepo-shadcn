@@ -1,5 +1,6 @@
 export const getProducts = async () => {
-    const response = await fetch("https://fakestoreapi.com/products");
+    const API_URL = process.env.NEXT_PUBLIC_API_URL;
+    const response = await fetch(`${API_URL}/products`);
 
     if (!response.ok) {
         throw new Error("Failed to fetch products");
